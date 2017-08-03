@@ -8,6 +8,7 @@ html(lang='en')
     title= title
     block css
       link(rel='stylesheet', href='/css/style.css')
+      link(rel='stylesheet', href='/css/freelancer.min.css')
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     block js
       script(src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js')
@@ -15,23 +16,27 @@ html(lang='en')
       if ENV_DEVELOPMENT
         script(src='http://localhost:35729/livereload.js')
   body(id='page-top' class='index')
-    div(id='skipnav')
-      a(href='#maincontent') Skip to main content
+    //- div(id='skipnav')
+    //-   a(href='#maincontent') Skip to main content
     nav(id='mainNav' class='navbar navbar-default navbar-fixed-top navbar-custom')
-      div(class='navbar-header page-scroll')
-        button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1')
-          span(class='sr-only') Toggle navigation
-          i(class='fa fa-bars')
-        a(class='navbar-brand' href='#page-top') Start Bootstrap
-      
-      div(class='collapse navbar-collapse' id='bs-example-navbar-collapse-1')
-        ul(class='nav navbar-nav navbar-right')
-          li(class='hidden')
-            a(href='#page-top')
-          li(class='page-scroll')
-            a(href='#portfolio') Portafolio
-          li(class='page-scroll')
-            a(href='#about') About
-          li(class='page-scroll')
-            a(href='#contact') Contact      
+      div(class='container')
+
+        div(class='navbar-header page-scroll')
+          button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1')
+            span(class='sr-only') Toggle navigation
+            p Menú
+            i(class='fa fa-bars')
+          a(class='navbar-brand' href='#page-top')= title
+        
+        div(class='collapse navbar-collapse' id='bs-example-navbar-collapse-1')
+          ul(class='nav navbar-nav navbar-right')
+            li(class='hidden')
+              a(href='#page-top')
+            li(class='page-scroll')
+              a(href='#portfolio') Portafolio
+            li(class='page-scroll')
+              a(href='#about') About
+            li(class='page-scroll')
+              a(href='#contact') Contact
+
     block content
